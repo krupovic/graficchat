@@ -79,7 +79,14 @@ function onMouseUp(event) {
 // Drawing functions
 // Use to draw multiple users paths
 // -----------------
-
+function drawText(sometext){
+	console.log("drawing text" + sometext);
+	var textlocation = new Point(300,100);
+	var textik = new PointText(textlocation);
+	textik.fillColor = 'black';
+	textik.content = sometext;
+	
+}
 
 function startPath( point, color, sessionId ) {
   paths[sessionId] = new Path();
@@ -162,3 +169,5 @@ socket.on( 'endPath', function( data, sessionId ) {
   endPath(data.point, sessionId);
   view.draw();
 })
+
+

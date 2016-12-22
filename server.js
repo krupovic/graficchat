@@ -28,11 +28,18 @@ socket.broadcast.emit('users', usersarray);
 		online++;
 		socket.broadcast.emit('users', usersarray);
 	});
+	
 	socket.on('message', function (message) {
 		var data = {'message' : message, 'pseudo' : currentConnections[socket.id].Pseudo};
 		socket.broadcast.emit('message', data);
 		console.log("user " + currentConnections[socket.id].Pseudo + " send this : " + message);
 		
+	});
+	
+	socket.on('typing',function(input){
+		var data = {'message' :input, 'pseudo' : currentConnections[socket.id].Pseudo};
+		socket.broadcast.emit('message', data);
+		console.log(data);
 	});
 	
 	
