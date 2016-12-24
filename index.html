@@ -1,23 +1,6 @@
 <html>
 <head>
-<style>
-   #form{
-   background:url("http://www.clipartkid.com/images/101/vector-for-free-use-note-paper-icon-zkFylP-clipart.png");
-   background-size: 600px 600px;
-   background-repeat: no-repeat;
-   width: 600px;
-   height: 600px;
-   margin: 0 auto;
-   padding: 150 0 0 150;}
-  #paper {
-   width: 100%;
-   margin: 0;
-   padding: 0;
-   background-color:#000
-   top: 0;
-   left: 0;
-}
-</style>
+<link rel="stylesheet" type="text/css" href="/style.css">
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script type="text/javascript" src='/socket.io/socket.io.js'></script>
 <script type="text/javascript" src="/paper.js"></script>
@@ -27,17 +10,20 @@
 </head>
    <body>
    <div id="whoisonline"></div>
-    <div id="chatEntries">  </div>   
+   <div id="chatEntries">  </div>   
 
 	<div id="Intro">	
-	  <input type="text" id="pseudoInput"></input><button type="button" id="pseudoSet">ВОЙТИ В ЧАТ</button>
+	<span id="alreadythere"></span>
+	  <input type="text" id="pseudoInput" size="15" placeholder="Выбери имя" ></input><!--button type="button" id="pseudoSet">ВОЙТИ В ЧАТ</button-->
+	  
 	</div>	
 	
    <div id="chatControls">	 
-   
-   <textarea rows="1" cols="100" id="messageInput"> </textarea>
-   <!--button id="send">Отправить</button-->
-   <canvas id ="draw" resize="true" keepalive="true" ></canvas>
+   	<h3>Печатай здесь:</h3>
+	<textarea rows="1" cols="60" id="messageInput" placeholder="Печатай здесь" style="background-color:#dd4433"> </textarea>
+	<!--button id="send">Отправить</button-->
+	<h3>Или рисуй здесь:</h3>
+	<canvas id ="draw" resize="true" keepalive="true" ></canvas>
    </div>
 
 </body>

@@ -2,10 +2,10 @@ $(function() {
 	
     $("#chatControls").hide();
     $("#pseudoSet").click(function() {setPseudo()});
-   // $("#send").click(function() {sentMessage();});
-	$( "#messageInput" ).keyup(function() {
-	TypingDetected();
-});   
+   	$("#messageInput" ).keyup(function() {TypingDetected();});   
+	$("#pseudoInput").on('keyup', function (e) {
+		if (e.keyCode == 13) { setPseudo();  }
+	});
 		// This demo depends on the canvas element
 	if(!('getContext' in document.createElement('canvas'))){
 		alert('Sorry, it looks like your browser does not support canvas!');
@@ -19,14 +19,13 @@ var sessionId = socket.io.engine.id;
 
 socket.on('message', function(data) {
     addMessage(data['message'], data['pseudo']);
-	console.log(data);
-	//drawText(data.pseudo + ":" + data.message);
+	
 });
 
 
 
 socket.on('users', function(data) {
-    let html = "";
+    let html = "Гостей в чате: " +(data.length+1)+". ";
 	data.forEach(function(value, index){
 		if (value.sessid != sessionId) html+="<span id="+ value.sessid+">"+value.name+"</span>,";
 		
@@ -34,6 +33,12 @@ socket.on('users', function(data) {
 	html+="<span id="+ sessionId +">YOU</span>";
 	$("#whoisonline").html(html);
 	console.log(data);// addMessage(data['message'], data['pseudo']);
+});
+
+socket.on('usersonconnect', function(data) {
+    //let html = "Гостей в чате: " +data.length+". ";
+	$("#alreadythere").html("Уже в чате: "+data);
+	//console.log(data);// addMessage(data['message'], data['pseudo']);
 });
 
 socket.on('connect', function() {
@@ -63,7 +68,7 @@ function setPseudo() {
         socket.emit('setPseudo', $("#pseudoInput").val());
         $('#chatControls').show();
         $('#pseudoInput').hide();
-        $('#pseudoSet').hide();
+        $('#Intro').hide();
     }
 }
 

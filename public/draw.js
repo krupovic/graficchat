@@ -92,12 +92,12 @@ function startPath( point, color, sessionId ) {
   paths[sessionId] = new Path();
   paths[sessionId].fillColor = color;
   paths[sessionId].add(point);
-  console.log(paths[sessionId]);
+  //console.log(paths[sessionId]);
 }
 
 function continuePath(top, bottom, sessionId) {
   var path = paths[sessionId];
-  console.log(top);
+ 
   path.add(top);
   path.insert(0, bottom);
 //  console.log("Path continued: "+paths[sessionId]);
@@ -113,7 +113,7 @@ function endPath(point, sessionId) {
   path.smooth();
   //console.log("Path ended") ;
  // console.log("testpath" + JSON.stringify(testpath));
- console.log("path" +path);
+
   delete paths[sessionId]
 
 }
