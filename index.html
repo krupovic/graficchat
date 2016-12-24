@@ -1,0 +1,30 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/style.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript" src='/socket.io/socket.io.js'></script>
+<script type="text/javascript" src="/paper.js"></script>
+<script type="text/javascript" src='/chat.js'></script>
+<script type="text/paperscript" src='/draw.js' canvas="draw"></script>
+
+</head>
+   <body>
+   <div id="whoisonline"></div>
+   <div id="chatEntries">  </div>   
+
+	<div id="Intro">	
+	<span id="alreadythere"></span>
+	  <input type="text" id="pseudoInput" size="15" placeholder="Выбери имя" ></input><!--button type="button" id="pseudoSet">ВОЙТИ В ЧАТ</button-->
+	  
+	</div>	
+	
+   <div id="chatControls">	 
+   	<h3>Печатай здесь:</h3>
+	<textarea rows="1" cols="60" id="messageInput" placeholder="Печатай здесь" style="background-color:#dd4433"> </textarea>
+	<!--button id="send">Отправить</button-->
+	<h3>Или рисуй здесь:</h3>
+	<canvas id ="draw" resize="true" keepalive="true" ></canvas>
+   </div>
+
+</body>
+</html>
