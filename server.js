@@ -1,8 +1,7 @@
 var express = require('express');
 var app = express();
 var server = require('http').Server(app);
-var port = 10001;
-var io = require('socket.io').listen(app.listen(process.env.PORT || 10001));
+var io = require('socket.io').listen(app.listen(process.env.PORT || 5000));
 
 app.use(express.static(__dirname + '/public'));
 
@@ -17,7 +16,6 @@ app.get('/', function (req, res) {
 
 // It is fired when a client tries to connect to the server; Socket.io creates a new socket that we will use to receive or send messages to the client.
 io.sockets.on('connection', function (socket) {
-
 socket.emit('usersonconnect', online);
 online++;
   // console.log("socket connection created");
@@ -77,6 +75,4 @@ online++;
 });
 
 
-
-app.use(express.static(__dirname + '/public'));
 
