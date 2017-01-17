@@ -8,6 +8,8 @@
 // We dont want it to be larger/smaller than this
 tool.maxDistance = 2;
 tool.maxDistance = 80;
+var width   = window.innerWidth;
+var height  = window.innerHeight;
 
 // Each user has a unique session ID
 // We'll use this to keep track of paths

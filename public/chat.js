@@ -75,6 +75,7 @@ function setPseudo() {
 function TypingDetected(){
 	
 	socket.emit('typing',$('#messageInput').val());
+	$("#myTexting").html('<div class="message"><p>Я: ' + $("#messageInput" ).val() + '</p></div>');
 	
 }
 
