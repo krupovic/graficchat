@@ -1,7 +1,8 @@
 body, input, textarea
 {
 font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
-	font-size: 24px;
+	font-size:32px;
+	font-size: 4vw;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 500;
@@ -53,4 +54,10 @@ font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewrite
   top: 0;
   left: 0;
   height: 10%
+}
+
+#clearbutton {
+    position: fixed;
+    bottom: 5%;
+	right: 5%; 
 }

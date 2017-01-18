@@ -3,6 +3,11 @@ $(function() {
     $("#chatControls").hide();
 	$('#collapsible').slideToggle('slow');
     $("#pseudoSet").click(function() {setPseudo()});
+	$("#clearbutton").click(function(){
+	paper.project.activeLayer.removeChildren();
+    paper.view.draw();	
+});
+	
    	$("#messageInput" ).keyup(function() {TypingDetected();});   
 	$("#pseudoInput").on('keyup', function (e) {
 		if (e.keyCode == 13) { setPseudo();  }
@@ -18,12 +23,12 @@ var socket = io.connect();
 var sessionId = socket.io.engine.id;
 //alert(sessionId);
 
+
+
 socket.on('message', function(data) {
     addMessage(data['message'], data['pseudo']);
 	
 });
-
-
 
 socket.on('users', function(data) {
     let html = "Гостей в чате: " +(data.length+1)+". ";

@@ -136,10 +136,6 @@ function emit(eventName, data) {
 
 
 
-
-
-
-
 // -----------------
 // On
 // Draw other users paths
