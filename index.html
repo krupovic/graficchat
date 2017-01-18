@@ -1,0 +1,36 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/style.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript" src='/socket.io/socket.io.js'></script>
+<script type="text/javascript" src="/paper.js"></script>
+<script type="text/javascript" src='/chat.js'></script>
+<script type="text/paperscript" src='/draw.js' canvas="draw"></script>
+
+</head>
+   <body>
+   
+
+ <div id="Intro"> 
+ <span id="alreadythere"></span>
+   <input type="text" id="pseudoInput" size="15" placeholder="Выбери имя" ></input><!--button type="button" id="pseudoSet">ВОЙТИ В ЧАТ</button-->
+   
+ </div> 
+ 
+  <div id="chatControls"> 
+  <input id="collapsibleButton" type="button" value="Переписывайся здесь (нажми)" onclick="$('#collapsible').slideToggle('slow');"></input>
+ 
+   <div id = "collapsible">
+    <div id="whoisonline"></div>
+    <div id="chatEntries"></div>   
+    <div id="myTexting"></div>     
+    <!--h3>Печатай здесь:</h3-->
+  <input type="text" id="messageInput" placeholder="Напиши что-нибудь" style="background-color:#dd4433"> </input>
+  <!--button id="send">Отправить</button-->
+ </div>
+ <canvas id ="draw" resize="true" keepalive="true" ></canvas>
+ <input type="image" src = "https://i.stack.imgur.com/eLsS8.png" id="clearbutton"></input>
+   </div>
+
+</body>
+</html>
