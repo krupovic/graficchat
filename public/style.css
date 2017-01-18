@@ -1,6 +1,5 @@
 body, input, textarea
-{
-font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+{font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
 	font-size:32px;
 	font-size: 4vw;
 	font-style: normal;
@@ -19,9 +18,10 @@ font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewrite
    margin-top: -150px;
    margin-left: -200px;
    width: 400px;
-   height: 300px;}
+   height: 300px;
+   }
 
-   #paper {
+#paper {
    width: 100%;
    margin: 0;
    padding: 0;
