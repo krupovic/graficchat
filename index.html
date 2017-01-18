@@ -9,9 +9,7 @@
 
 </head>
    <body>
-   <div id="whoisonline"></div>
-   <div id="chatEntries"></div>   
-   <div id="myTexting"></div>   
+   
 
 	<div id="Intro">	
 	<span id="alreadythere"></span>
@@ -19,11 +17,19 @@
 	  
 	</div>	
 	
-   <div id="chatControls">	 
-   	<h3>Печатай здесь:</h3>
-	<textarea rows="1" cols="60" id="messageInput" placeholder="Печатай здесь" style="background-color:#dd4433"> </textarea>
-	<!--button id="send">Отправить</button-->
+   <div id="chatControls">	
+  <input id="collapsibleButton" type="button" value="Переписывайся здесь (нажми)" onclick="$('#collapsible').slideToggle('slow'); 	"></input>
+ 
+   <div id = "collapsible">
+	   <div id="whoisonline"></div>
+	   <div id="chatEntries"></div>   
+	   <div id="myTexting"></div>     
+	   <!--h3>Печатай здесь:</h3-->
+		<input type="text" id="messageInput" placeholder="Напиши что-нибудь" style="background-color:#dd4433"> </textarea>
+		<!--button id="send">Отправить</button-->
+	</div>
 	<h3>Или рисуй здесь:</h3>
+	
 	<canvas id ="draw" resize="true" keepalive="true" ></canvas>
    </div>
 

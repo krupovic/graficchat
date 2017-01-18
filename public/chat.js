@@ -1,6 +1,7 @@
 $(function() {
 	
     $("#chatControls").hide();
+	$('#collapsible').slideToggle('slow');
     $("#pseudoSet").click(function() {setPseudo()});
    	$("#messageInput" ).keyup(function() {TypingDetected();});   
 	$("#pseudoInput").on('keyup', function (e) {

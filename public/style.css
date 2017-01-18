@@ -19,7 +19,8 @@ font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewrite
    margin-left: -200px;
    width: 400px;
    height: 300px;}
-#paper {
+
+   #paper {
    width: 100%;
    margin: 0;
    padding: 0;
@@ -43,4 +44,12 @@ font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewrite
 	 left: 30%; 
 	 display:block; 
 	 margin:0 auto;
+}
+
+#collapsibleButton, #messageInput {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
 }
