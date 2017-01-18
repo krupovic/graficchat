@@ -1,11 +1,11 @@
 body, input, textarea
-{
-font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
-	font-size: 24px;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 500;
-	line-height: 26.4px;
+{font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+ font-size:32px;
+ font-size: 4vw;
+ font-style: normal;
+ font-variant: normal;
+ font-weight: 500;
+ line-height: 26.4px;
 }
 #Intro{
    background:url("/loginback.bmp");
@@ -18,29 +18,46 @@ font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewrite
    margin-top: -150px;
    margin-left: -200px;
    width: 400px;
-   height: 300px;}
+   height: 300px;
+   }
+
 #paper {
    width: 100%;
    margin: 0;
    padding: 0;
-   background-color:#000
+   background-color:#000;
    top: 0;
    left: 0;
 }
 #pseudoInput{
     position: absolute;
     top: 50%;
-	left: 50%; 
+ left: 50%; 
     background:transparent;
     margin-left: -4em;
     margin-top: -1em;
-	display:block; 
+ display:block; 
 }
 
 #alreadythere {
-	 position: relative;
-	 top: 10%;
-	 left: 30%; 
-	 display:block; 
-	 margin:0 auto;
+  position: relative;
+  top: 10%;
+  left: 30%; 
+  display:block; 
+  margin:0 auto;
+}
+
+#collapsibleButton, #messageInput {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  height: 10%;
+}
+
+#clearbutton {
+    position: fixed;
+    bottom: 5%;
+ right: 5%; 
 }
